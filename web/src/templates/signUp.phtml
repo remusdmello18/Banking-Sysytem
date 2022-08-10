@@ -1,0 +1,60 @@
+<!--This page allows users to create a new user account. Users must enter a user name that's not been used and
+    password twice which must be identical
+-->
+<?php include "header.phtml" ?>
+<!------------------------------>
+<h1>Welcome to Jis Tech</h1>
+<div id="signUp">
+
+    <h2 class="center">Please Enter Your Details</h2>
+
+    <form method="post" action="" onsubmit="return validateSubmit(this)" id="inputForm">
+
+            <? echo "<p class='errorMessage'>$error</p>"?>
+            <br>
+            <table>
+                <tbody id="inputBody">
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name" value="<?= $name ?>" required></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>User Name:</td>
+                        <td><input type="text" name="userName" value="<?= $userName ?>" onfocusout="checkUserExist(this.value)" required></td>
+                        <td id="userNameErrorMessage" class="errorMessage"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input id="emailInput" type="text" name="email" value="<?= $email ?>" onfocusout="validateEmail()" required></td>
+                        <td id="emailErrorMessage" class='errorMessage'></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="userPassword" value="<?= $userPassword ?>" required
+                                   onfocusout="validatePassword(this.value)"></td>
+                        <td id="passwordErrorMessage" class='errorMessage'></td>
+                    </tr>
+                    <tr>
+                        <td>Re-Enter Password:</td>
+                        <td><input type="password" name="userPassword2" value="<?= $userPassword2 ?>" required></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="center"><input type="submit" value="Register" name="signUp">
+                            <input type="reset" value="Reset" style="float:right">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </form>
+</div>
+<script>
+    let body = document.getElementsByTagName("body")[0];
+    body.onresize = centerBasedOnFirstTwoColumns;
+    body.onload = centerBasedOnFirstTwoColumns;
+</script>
+<!------------------------------>
+<?php include "footer.phtml" ?>
+
+

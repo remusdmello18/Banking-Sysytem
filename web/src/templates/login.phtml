@@ -1,0 +1,28 @@
+<!--This is the login page, user must enter username and password in order to login-->
+<?php include "header.phtml" ?>
+<!------------------------------>
+<h1>Welcome to Jis Tech</h1>
+<div id="logIn">
+    <form method="post" >
+        <? echo "<p class='errorMessage'>$error</p>"?>
+        <table>
+            <tr>
+                <td>User Name:</td>
+                <td><input type="text" name="userName" value="<?= $userName ?>"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="userPassword" value="<?= $userPassword ?>"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="right"><input type="submit" value="Login" name="validateLogin"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="right">Don't have an account? <input type="submit" value="Register" name="signUp"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<!------------------------------>
+<?php include "footer.phtml" ?>
+

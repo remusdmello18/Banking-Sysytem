@@ -1,0 +1,249 @@
+/**
+ * Selectors
+ */
+
+/* Make footer stick to the bottom of the page,from https://css-tricks.com/snippets/css/sticky-footer/ */
+* {
+    margin: 0;
+}
+
+/**
+ * Coloring the page
+ */
+html, body {
+    height: 100%;
+    background-color: #222222;
+    color: #ffa500;
+}
+
+h1 {
+    font-size: 2.6em;
+    text-align: center;
+    margin: 2% 0 4% 0;
+}
+
+hr{
+    border-color: #ffa500;
+}
+
+a {
+    color: #ffa500;
+}
+
+
+/**
+ * Classes
+ * for multiple use, generic names
+ */
+.center{
+    text-align: center;
+}
+
+.center table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right{
+    text-align: right;
+}
+
+.errorMessage {
+    color:red;
+}
+
+.backButton{
+    margin-left: 70%;
+    margin-right: fill;
+}
+
+.small-margin {
+    margin: 1%;
+}
+
+.sortHeaderRow th {
+    cursor: pointer;
+}
+
+
+/**
+ * IDs
+ * for one time use, specific names
+ */
+#page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -30px;
+}
+
+#page-wrap:after {
+    float:bottom;
+    height: 10px;
+}
+
+#logIn form {
+    text-align:center;
+    padding-top:80px;
+}
+
+#logIn table{
+    text-align: center;
+    margin:auto;
+}
+
+#signUp, #signUp table{
+    margin: auto;
+}
+
+#usageInstructions {
+    font-size: larger;
+    text-align: left;
+    display: inline-block;
+}
+
+#browseProduct{
+    width:100%;
+}
+
+
+
+/**
+ * top logo and date
+ */
+#logo{
+    width: 100%;
+}
+
+#logo label{
+    position:absolute;
+    top:0;
+    right:0;
+    margin: 1% 3% 0 0;
+    font-size: larger;
+}
+
+/**
+*   Menu bar
+*/
+
+.topMenu{
+    width:100%;
+    text-align: center;
+}
+
+.topMenu a{
+    padding-left:20px;
+    padding-right:20px;
+    width: 25%;
+    font-size:35px;
+}
+
+.topMenu a:hover{
+    background-color:rgba(255,165,0,0.5);
+}
+
+/**
+ *  Side bar for browse page
+ */
+
+#sideBar{
+    display:inline-block;
+    position:fixed;
+    float: left;
+    width: 20%;
+    border-style: solid;
+    margin-top:4%;
+    margin-left: 1%;
+}
+
+#sideBar h1{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 0;
+}
+
+#sideBar input[type="checkbox"]{
+    margin-left:7%;
+    margin-bottom: 5%;
+    width: 20px;
+    height: 20px;
+}
+
+#sideBar input[type="radio"]{
+    margin-left:7%;
+    margin-bottom: 5%;
+    width: 20px;
+    height: 20px;
+}
+
+input[type="checkbox"] + label{
+    font-size:25px;
+}
+
+input[type="radio"] + label{
+    font-size:25px;
+}
+
+/**
+ * Products table
+ */
+
+#ProductsTableDiv{
+    /*display: inline-block;*/
+    margin-left:23%;
+    width: 70%;
+    display: table;
+    border-style: solid;
+    margin-top:4%;
+    margin-right: 5%;
+}
+
+#ProductsTableDiv h1{
+    font-size: 2em;
+    text-align: center;
+    margin:0;
+    padding-bottom: 3%;
+}
+
+#ProductsTableDiv table {
+    width: 100%;
+}
+
+.search {
+    position: relative;
+}
+
+.search label {
+    position: relative;
+}
+
+.search input {
+    text-indent: 25px;
+}
+
+.search .fa-search {
+    position: absolute;
+    top: 2px;
+    left: 7px;
+    font-size: 15px;
+}
+
+
+/**
+ * Product Table ForSearch
+ */
+.ProductsTable table, .ProductsTable th, .ProductsTable td {
+    border: 1px solid;
+    padding: 0.4em 1.2em;
+    position: relative;
+    text-align: left;
+}
+
+.with-currency[lang="en-NZ"] td:nth-child(4)::before {
+    content: '$';
+}
